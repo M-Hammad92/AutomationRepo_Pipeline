@@ -1,0 +1,37 @@
+# Starter pipeline
+
+
+
+trigger: none
+
+
+# Triggering (Automation) Pipeline by (Development) Pipeline by Hooking on (Branch)
+
+# resources:
+#   pipelines:
+#     - pipeline: TriggerByDEV
+#       source: DevRepo
+#       trigger:
+#         branches:
+#           include:
+#             - main
+
+
+
+# Triggering (Automation) Pipeline by (Development) Pipeline by Hooking on (Stage)
+
+#resources:
+#  pipelines:
+#    - pipeline: TriggerByDEV
+#      source: DevRepo
+#      trigger:
+#        stages:
+#          - PreProd
+
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Try Me!
+  displayName: 'Run a one-line script'
